@@ -42,3 +42,17 @@ os.chdir()
     Search for - protoc-3.20.1-linux-x86_64.zip
 - Unzip into root folder and add '<PATH TO protoc folder>/bin' into system environment variable
 
+- run the following command 
+```bash
+cd Tensorflow/models/reserch
+protoc object_detection/protos/*.proto --python_out=.
+```
+## Install COCO API
+```bash 
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+```
+## Install Object Detection API 
+```bash
+cp object_detection/packages/tf2/setup.py .
+```
+
