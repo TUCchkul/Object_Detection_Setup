@@ -78,5 +78,23 @@ mkdir workspace/training_demo
 cd workspace/training_demo
 mkdir -p annotations exported-models models pre-trained-models images/test images/train
 ```
+## Create label map file in training_demo/annotations
+- and write content as -
+```bash
+item {
+    id: 1
+    name: 'helmet'
+}
+
+item {
+    id: 2
+    name: 'head'
+}
+
+item {
+    id: 3
+    name: 'person'
+}
+```
 
 
