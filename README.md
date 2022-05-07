@@ -54,9 +54,47 @@ pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonA
 ## Install Object Detection API 
 ```bash
 cp object_detection/packages/tf2/setup.py .
+python -m pip install .
 ```
 ## Test your Installation
 ```bash 
 python object_detection/builders/model_builder_tf2_test.py
 ```
+## Run Examples - 
+- Create workspace/example_1 irectory in project root 
+```bash
+mkdir -p workspace/example_1
+```
+```bash 
+cd workspace/example_1
+```
+- Download notebook
+```bash
+curl https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/2.2.0/_downloads/7f6123c070712ed53dd2521219dd011c/plot_object_detection_simple.ipynb > plot_object_detection_simple.ipynb
+```
+## Custom model traning
+```bash
+mkdir workspace/training_demo
+cd workspace/training_demo
+mkdir -p annotations exported-models models pre-trained-models images/test images/train
+```
+## Create label map file in training_demo/annotations
+- and write content as -
+```bash
+item {
+    id: 1
+    name: 'helmet'
+}
+
+item {
+    id: 2
+    name: 'head'
+}
+
+item {
+    id: 3
+    name: 'person'
+}
+```
+
 
